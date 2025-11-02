@@ -12,6 +12,7 @@
 #if !MODO_SIMULACION
   #define DHTPIN 7
   #define DHTTYPE DHT22
+  #define BMP280_I2C_ADDRESS 0x76  // Dirección I2C del BMP280
 #endif
 
 // ======================
