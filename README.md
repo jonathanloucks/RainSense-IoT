@@ -68,7 +68,7 @@ RainSense-IoT/
   - DHT22 - Temperatura y Humedad
   - BMP280 - Presión Atmosférica
 - **Conectividad**: Módulo Ethernet W5100 o ESP8266
-- **Alimentación**: 7-12V DC estable
+- **Alimentación**: 5-12V DC estable
 
 ### Software
 - **PlatformIO** (recomendado) o Arduino IDE
