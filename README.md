@@ -74,6 +74,7 @@ RainSense-IoT/
 - **PlatformIO** (recomendado) o Arduino IDE
 - **Librerías**:
   - DHT Sensor Library
+  - Adafruit BMP280 Library
   - ArduinoJson
   - Ethernet Library
   - ArduinoHttpClient
@@ -94,10 +95,11 @@ platform = atmelavr
 board = uno
 framework = arduino
 lib_deps = 
-    adafruit/DHT sensor library@^1.4.4
-    bblanchon/ArduinoJson@^7.0.0
-    arduino-libraries/Ethernet@^2.0.2
-    arduino-libraries/ArduinoHttpClient@^0.4.0
+    adafruit/DHT sensor library
+    adafruit/Adafruit BMP280 Library
+    bblanchon/ArduinoJson
+    arduino-libraries/Ethernet
+    arduino-libraries/ArduinoHttpClient@
 monitor_speed = 9600
 ```
 
