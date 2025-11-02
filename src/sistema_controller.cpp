@@ -38,8 +38,13 @@ HttpClientBackend httpBackend;
 void leerSensores() {
   SensorData datos = sensorController.readSensors();
   
-  if (datos.temperatura > 0 && datos.humedad > 0) {
+  // Validar datos antes de agregarlos al filtro
+  if (datos.temperatura > -40 && datos.temperatura < 85 && 
+      datos.humedad >= 0 && datos.humedad <= 100 &&
+      datos.presion > 800 && datos.presion < 1100) {
     dataFilter.addData(datos.temperatura, datos.humedad, datos.presion);
+  } else {
+    Serial.println("Datos de sensores invalidos - descartados");
   }
 }
 
@@ -49,6 +54,12 @@ void filtrarDatos() {
   if (datosFiltrados.humedad > 0) {
     float tendenciaHumedad = dataFilter.calculateHumidityTrend();
     float tendenciaPresion = dataFilter.calculatePressureTrend();
+    
+    Serial.print("Tendencia Humedad: ");
+    Serial.println(tendenciaHumedad, 4);
+    Serial.print("Tendencia Presion: ");
+    Serial.println(tendenciaPresion, 4);
+    
     predictionEngine.predict(datosFiltrados.temperatura, datosFiltrados.humedad, 
                            datosFiltrados.presion, tendenciaHumedad, tendenciaPresion);
   }
@@ -73,6 +84,12 @@ void enviarAlBackend() {
     } else {
       Serial.println("Error enviando datos");
     }
+    
+    // Información del estado de los sensores
+    #if !MODO_SIMULACION
+      Serial.print("BMP280 Disponible: ");
+      Serial.println(sensorController.isBMP280Available() ? "SI" : "NO");
+    #endif
     
     Serial.println("------------------------------------");
   }
